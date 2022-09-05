@@ -38,19 +38,7 @@ session_start();
     
     <div class="d-flex" id="wrapper">
 
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Appic Software </div>
-      <div class="list-group list-group-flush">
-        <a href="attendence.php" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        
-        <a href="attendence_view.php" class="list-group-item list-group-item-action bg-light">Attendence</a>
-        <a href="edit.php?id=<?php echo $_SESSION['name'];?>" class="list-group-item list-group-item-action bg-light">Profile</a>    
-      </div>
-    </div>
-    <!-- /#sidebar-wrapper -->
-   
-   
+    
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
