@@ -9,7 +9,8 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
     
     <style>
-   form .error{
+        
+        form .error{
                     color: coral;
                    }  
     table {
@@ -40,7 +41,7 @@
             submitHandler: function(form,e){      
                     e.preventDefault();
                 var data1=new FormData($("#myForm")[0]);
-               //alert(data1.get('uname'));
+               //alert(data1.get('pass'));
                 $.ajax({
                     type:"POST",
                     url:"login_check.php",
@@ -49,7 +50,7 @@
                     processData:false,
                     success: function(data){
                         if(data==1)
-                        {window.location="index.php";}
+                        {window.location="Deshboard.php";}
                         else{
                             alert("Invalid UserName and Password");
                         }
@@ -60,57 +61,39 @@
              }        
     });
             });
-  </script>    
+    
+    
+    </script>
+    
     <body>
      <div class="container">
          <br>
         <h1 class="text-primary text-uppercase text-center"> EMPLOYE MANAGEMENT SYSTEM</h1>
-         <br><br>
-         <h3 class="text-primary text-uppercase text-center" >Employee Login</h3>
          <br>
+         <h3 class="text-primary text-uppercase text-center">Admin Login</h3>
+         <br><br>
         <div class="form-group   ">
             <form id="myForm" method="post" enctype="multipart/form-data">
-                
-              <div class="row">
-                  <div class="col"> </div>
-                  <div class="col">
-               <label>UserName:</label><span id="error-name"></span>
-              <input type="text" name="uname" class="form-control " id="uname">
-                <br>
-                  </div>
-                  <div class="col">
-                  
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col"> </div>
-                <div class="col">
-                    <label>Password:</label><span id="error-email"></span>
-                      <input type="password" name="pass" class="form-control" id="pass"><br>
-                    </div>
-                    <div class="col"> </div>
-                    
-                </div>
-                <div class="row">
-                    <div class="col"> </div>
-                <div class="col">
-                    <input type="submit" class="btn btn-primary btn-block" name="submit" value="Login ">
-        
-                    </div>
-                     <div class="col">
-                  
-                    </div>
-                </div>
-            </form>
-            <div class="row">
+            <div class="row" >
             <div class="col"> </div>
-                <div class="col"> <p>
-  		Not yet a member? <a href="signup.php" class="btn btn-primary">Sign up</a>
-  	    </p></div>
-                <div class="col"> </div>
-            
+                 <div class="col"><label>UserName:</label><span id="error-name"></span>
+              <input type="text" name="uname" class="form-control " id="uname">
+                <br><br> </div>
+                 <div class="col"> </div>
             </div>
-         
+            <div class="row" >
+            <div class="col"> </div>
+                 <div class="col">  <label>Password:</label><span id="error-email"></span>
+             <input type="password" name="pass" class="form-control" id="pass"><br><br> </div>
+                 <div class="col"> </div>
+            </div>
+            <div class="row" >
+            <div class="col"> </div>
+                 <div class="col"> <input type="submit" class="btn btn-primary btn-block" name="submit" value="Login "></div>
+                 <div class="col"> </div>
+            </div>
+      
+            </form>
              
   
          </div>
